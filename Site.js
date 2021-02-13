@@ -7,6 +7,7 @@ function play(src) {
     }
 }
 
+
 function stop(src) {
     var audio = document.getElementsByClassName(src);
 

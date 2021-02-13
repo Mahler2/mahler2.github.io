@@ -16,6 +16,7 @@ async function play(src) {
         }
         count=0;
     }
+    count=0;
 }
 var count=0;
 function myOnCanPlayFunction(nmb) {

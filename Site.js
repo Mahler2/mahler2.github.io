@@ -1,7 +1,14 @@
-function play(src) {
+async function play(src) {
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     const audioCtx = new AudioContext();
     var audio = document.getElementsByClassName(src);
+    for (let item of audio) {
+        await item.play();
+    }
+    for (let item of audio) {
+        item.pause();
+        item.currentTime = 0;
+    }
     for (let item of audio) {
         item.play();
     }

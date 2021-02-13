@@ -4,6 +4,10 @@ function play(src) {
     for (let item of audio) {
         item.play();
     }
+    audio[0].currentTime = 0;
+    audio[1].currentTime = 0;
+    audio[2].currentTime = 0;
+    audio[3].currentTime = 0;
 }
 
 function stop(src) {

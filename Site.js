@@ -3,14 +3,18 @@ async function play(src) {
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     const audioCtx = new AudioContext();
     var audio = document.getElementsByClassName(src);
-
-    for (let item of audio) {
-        item.play();
+    console.log(count);
+    if(count>3){
+        for (let item of audio) {
+            item.play();
+        }
+        count=0;
     }
 }
-
+var count=0;
 function myOnCanPlayFunction(nmb) {
     console.log('Can play'+ nmb);
+    count++;
 }
 
 

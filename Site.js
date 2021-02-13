@@ -1,39 +1,33 @@
 async function play(src) {
-   
+
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     const audioCtx = new AudioContext();
     var audio = document.getElementsByClassName(src);
     console.log(count);
     for (let item of audio) {
-        item.mute=true;
         item.play();
+        item.mute = true;
     }
-    if(count>4){
+    if (count >= 4) {
+        console.log("hier");
         stop(src);
         for (let item of audio) {
-            item.mute=false;
-            item.play();
-        }
-        for (let item of audio) {
-            item.pause();
-            item.currentTime = 0;
-        }
-        for (let item of audio) {
+            item.mute = false;
             item.play();
         }
     }
-    count=0;
+    count = 0;
 }
-var count=0;
+var count = 0;
 function myOnCanPlayFunction(nmb) {
-    console.log('Can play'+ nmb);
+    console.log('Can play' + nmb);
     count++;
 }
 
 
 function stop(src) {
     var audio = document.getElementsByClassName(src);
-
+    console.log("stop")
     for (let item of audio) {
         item.pause();
         item.currentTime = 0;

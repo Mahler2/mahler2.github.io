@@ -14,6 +14,10 @@ async function play(src) {
             item.mute=false;
             item.play();
         }
+        for (let item of audio) {
+            item.currentTime = 0;
+        }
+
         count=0;
     }
     count=0;

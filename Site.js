@@ -8,7 +8,6 @@ async function play(src) {
         item.mute=true;
         item.play();
     }
-    while (count <4){}
     if(count>4){
         stop(src);
         for (let item of audio) {

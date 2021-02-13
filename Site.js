@@ -8,15 +8,14 @@ async function play(src) {
         item.play();
         item.muted = true;
     }
+    while(count<4){}
     if (count >= 4) {
-        stop(src);
         console.log("hier");
-        setTimeout(function () {
             for (let item of audio) {
+                item.currentTime = 0;
                 item.muted = false;
-                item.play();
             }
-        }, 2000)
+
     }
     count = 0;
 }

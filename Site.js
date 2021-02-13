@@ -15,10 +15,12 @@ async function play(src) {
             item.play();
         }
         for (let item of audio) {
+            item.pause();
             item.currentTime = 0;
         }
-
-        count=0;
+        for (let item of audio) {
+            item.play();
+        }
     }
     count=0;
 }

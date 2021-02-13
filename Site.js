@@ -2,11 +2,6 @@ async function play(src) {
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     const audioCtx = new AudioContext();
     var audio = document.getElementsByClassName(src);
-    await audio[0].play();
-    await audio[1].play();
-    await audio[2].play();
-    await audio[3].play();
-    
 
     for (let item of audio) {
         item.play();

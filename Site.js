@@ -1,4 +1,5 @@
 async function play(src) {
+    stop(src);
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     const audioCtx = new AudioContext();
     var audio = document.getElementsByClassName(src);

@@ -6,16 +6,19 @@
 <link rel="stylesheet" href="Site.css" />
 
 <body>
-    <div>
+    <div style>
         <input class="buttonHeader" type="button" value="Start Play" onclick="play('audio')" />
         <input class="buttonHeader" type="button" value="Stop Play" onclick="stop('audio')" />
     </div>
     <div>
-        <input class="muter" id="mute1" type="image" src="1.jpg" value="Mute1" onclick="mute('audio1','mute1')" />
-        <input class="muter" id="mute2" type="image" src="2.jpg" onclick="mute('audio2','mute2')" />
-        <input class="muter" id="mute3" type="image" src="3.jpg" onclick="mute('audio3','mute3')" />
-        <input class="muter" id="mute4" type="image" src="4.jpg" onclick="mute('audio4','mute4')" />
-    </div>
+      <input class="muter" id="mute1" type="image" src="1.jpg" value="Mute1" onclick="mute('audio1','mute1')" />
+      <input class="muter" id="mute2" type="image" src="2.jpg" onclick="mute('audio2','mute2')" />
+  </div>
+  <div>
+      <input class="muter" id="mute3" type="image" src="3.jpg" onclick="mute('audio3','mute3')" />
+      <input class="muter" id="mute4" type="image" src="4.jpg" onclick="mute('audio4','mute4')" />
+  </div>
+
 
 
     <audio class="audio" id="audio1" src="hirten-001.mp3" type="audio/mp3" loop="true" style="display: none;">

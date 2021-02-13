@@ -3,6 +3,10 @@ function play(src) {
     for (let item of audio) {
         item.play();
     }
+    audio[0].currentTime=audio[3].currentTime;
+    audio[1].currentTime=audio[3].currentTime;
+    audio[2].currentTime=audio[3].currentTime;
+    audio[3].currentTime=audio[3].currentTime;
 }
 
 function stop(src) {

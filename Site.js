@@ -4,6 +4,10 @@ function play(src) {
     var audio = document.getElementsByClassName(src);
     
     for (let item of audio) {
+        item.load();
+    }
+
+    for (let item of audio) {
         item.play();
     }
     for (let item of audio) {

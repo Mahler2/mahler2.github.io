@@ -1,11 +1,17 @@
 async function play(src) {
-    stop(src);
+   
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     const audioCtx = new AudioContext();
     var audio = document.getElementsByClassName(src);
     console.log(count);
+    for (let item of audio) {
+        item.mute=true;
+        item.play();
+    }
     if(count>3){
+        stop(src);
         for (let item of audio) {
+            item.mute=false;
             item.play();
         }
         count=0;

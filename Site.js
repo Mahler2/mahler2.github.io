@@ -6,18 +6,7 @@ async function play(src) {
     console.log(count);
     for (let item of audio) {
         item.play();
-        item.muted = true;
     }
-    while(count<4){}
-    if (count >= 4) {
-        console.log("hier");
-            for (let item of audio) {
-                item.currentTime = 0;
-                item.muted = false;
-            }
-
-    }
-    count = 0;
 }
 var count = 0;
 function myOnCanPlayFunction(nmb) {

@@ -1,6 +1,6 @@
 function play(src) {
     var audio = document.getElementsByClassName(src);
-
+    current.currentTime=0;
     for (let item of audio) {
         item.play();
         item.currentTime=current.currentTime;
